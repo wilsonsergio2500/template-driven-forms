@@ -1,0 +1,30 @@
+:host {
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+  div {
+    text-align: center;
+  }
+
+  .example-1{
+      padding:20px;
+  }
+  .example-2{
+      padding:20px;
+      ::ng-deep{
+          ngx-chips-none{
+              display:flex;
+              flex-direction:column;
+              justify-content:flex-start;
+              align-items:flex-start;
+          }
+      }
+  }
+}
