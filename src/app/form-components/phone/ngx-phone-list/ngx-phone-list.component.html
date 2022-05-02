@@ -1,0 +1,24 @@
+
+<div class="actions">
+  <button mat-mini-fab aria-label="Add Phone" type="button" (click)="add()" color="primary">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
+<div class="items-container">
+  <ng-container *ngFor="let phone of phones; let i= index">
+    <form #ngForm="ngForm">
+      <mat-form-field>
+        <ngx-phone [ngModel]="phone"
+                   class="full-width"
+                   required
+                   name="phone"></ngx-phone>
+        <button mat-icon-button matSuffix type="button" color="warn" (click)="remove(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <mat-error formControlItem="phone"></mat-error>
+      </mat-form-field>
+    </form>
+  </ng-container>
+</div>
+

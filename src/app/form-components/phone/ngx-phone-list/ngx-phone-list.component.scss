@@ -1,0 +1,17 @@
+:host{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    .actions{
+        display:flex;
+        justify-content:flex-end;
+    }
+    .items-container{
+        padding:10px;
+        ::ng-deep{
+            mat-form-field{
+                width:100%;
+            }
+        }
+    }
+}

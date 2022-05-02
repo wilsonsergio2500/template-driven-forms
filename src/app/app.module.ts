@@ -10,6 +10,7 @@ import { FormControlItemDirective } from './directives/form-control-item.directi
 import { NgxChipsCaComponent } from './form-components/ngx-chips-ca/ngx-chips-ca.component';
 import { ExampleFormComponent } from './forms/example-form.component';
 import { NgxChipsNoneComponent } from './form-components/ngx-chips-none/ngx-chips-none.component';
+import { NgxPhoneComponent, NgxPhoneListComponent } from './form-components/phone';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,8 @@ import { NgxChipsNoneComponent } from './form-components/ngx-chips-none/ngx-chip
     NgxChipsCaComponent,
     NgxChipsNoneComponent,
     FormControlItemDirective,
+    NgxPhoneComponent,
+    NgxPhoneListComponent,
     ExampleFormComponent
   ],
   imports: [

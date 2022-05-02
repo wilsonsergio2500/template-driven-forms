@@ -16,25 +16,42 @@
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
-        <input matInput
-               placeholder="Favorite blog"
-               value="Sushi"
-               required
-               ngModel
-               autocomplete="off"
-               name="favoriteblog" />
-        <mat-error formControlItem="favoriteblog"></mat-error>
+    <input matInput
+           placeholder="Favorite blog"
+           value="Sushi"
+           required
+           ngModel
+           autocomplete="off"
+           name="favoriteblog" />
+    <mat-error formControlItem="favoriteblog"></mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <ngx-chips-ca placeholder="Enter your Tags..."
+                  ngModel
+                  [required]="true"
+                  name="tags"></ngx-chips-ca>
+    <mat-error formControlItem="tags" [errors]="chipErrorMessage"></mat-error>
+  </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>List of Phones</mat-label>
+        <ngx-phone-list ngModel
+                        required
+                        name="phones">
+        </ngx-phone-list>
+        <mat-error formControlItem="phones" [errors]="phoneErrors"></mat-error>
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
-        <ngx-chips-ca placeholder="Enter your Tags..."
-                      ngModel
-                      [required]="true"
-                      name="tags"></ngx-chips-ca>
-        <mat-error formControlItem="tags" [errors]="chipErrorMessage"></mat-error>
+        <ngx-phone ngModel
+                   required
+                   name="phone"></ngx-phone>
+        <mat-error formControlItem="phone"></mat-error>
       </mat-form-field>
 
-      <button type="submit" mat-raised-button color="primary" [disabled]="ngForm.invalid" >Submit</button>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+        <!--<button type="submit" mat-raised-button color="primary" [disabled]="ngForm.invalid" >Submit</button>-->
     </form>
   </mat-card>
   
