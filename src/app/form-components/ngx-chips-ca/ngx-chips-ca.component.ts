@@ -104,7 +104,7 @@ export class NgxChipsCaComponent
   }
 
   get errorState(): boolean {
-    return this.touched && (!!this.ngControl?.control?.errors ?? false);
+    return (this.touched || ((this.ngControl as any)?._parent?.submitted ?? false)) && (!!this.ngControl?.control?.errors ?? false);
   }
 
   get empty() {

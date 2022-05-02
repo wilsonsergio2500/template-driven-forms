@@ -11,8 +11,11 @@ export class ExampleFormComponent {
   chipErrorMessage = {
     wrongMinSize: "Must have at least 3"
   }
+  phoneErrors = {
+    required: "Every phone number must be valid"
+  }
 
-  onSubmit(form : NgForm) {
+  onSubmit(form: NgForm) {
     console.log(form);
   }
 }

@@ -9,22 +9,32 @@
     width: 100%;
   }
 
+ /* .mat-form-field-type-ngx-phone-list {
+    ::ng-deep {
+      .mat-form-field-label {
+        display: block;
+      }
+    }
+  }*/
+
   div {
     text-align: center;
   }
 
-  .example-1{
-      padding:20px;
+  .example-1 {
+    padding: 20px;
   }
-  .example-2{
-      padding:20px;
-      ::ng-deep{
-          ngx-chips-none{
-              display:flex;
-              flex-direction:column;
-              justify-content:flex-start;
-              align-items:flex-start;
-          }
+
+  .example-2 {
+    padding: 20px;
+
+    ::ng-deep {
+      ngx-chips-none {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
       }
+    }
   }
 }
